@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sorts", "Sorts\Sorts.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeArray", "TreeArray\TreeArray.csproj", "{C84C99F3-2793-4DC1-A2E6-6D4DABAE9AB5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BST", "BST\BST.csproj", "{8FCEAE81-6F32-4FC1-AAFD-2317C1816352}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{C84C99F3-2793-4DC1-A2E6-6D4DABAE9AB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C84C99F3-2793-4DC1-A2E6-6D4DABAE9AB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C84C99F3-2793-4DC1-A2E6-6D4DABAE9AB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FCEAE81-6F32-4FC1-AAFD-2317C1816352}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FCEAE81-6F32-4FC1-AAFD-2317C1816352}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FCEAE81-6F32-4FC1-AAFD-2317C1816352}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FCEAE81-6F32-4FC1-AAFD-2317C1816352}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
