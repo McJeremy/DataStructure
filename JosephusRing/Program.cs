@@ -22,12 +22,20 @@ namespace JosephusRing
         }
     }
 
+    //使用双向链表
     public class JosephusNode
     {
-        public bool IsKickout
+        //public bool IsKickout
+        //{
+        //    get; set;
+        //}
+
+        public JosephusNode Prev
         {
-            get; set;
+            get;
+            set;
         }
+
         public JosephusNode Next
         {
             get;
@@ -46,38 +54,71 @@ namespace JosephusRing
     {
         public static void KickoutByLink(JosephusNode head)
         {
-            var pre = head;
+            #region 单循环链表的实现
+
+            //var pre = head;
+            //var curr = head;
+            //int count = 1;
+            //while (null != curr)
+            //{
+            //    if (count == 3)
+            //    {
+            //        Console.WriteLine("出圈{0}:", curr.Index);
+            //        pre.Next = curr.Next;
+            //        count = 0;
+            //    }
+            //    pre = curr;
+            //    curr = curr.Next;
+            //    count++;
+
+            //    if (pre == curr)
+            //    {
+            //        Console.WriteLine("留下{0}:", curr.Index);
+            //        break;
+            //    }
+            //}
+
+            #endregion
+
+            #region 双向循环链表的实现
+
             var curr = head;
             int count = 1;
-            while (null!= curr)
+            while (curr.Next != curr)
             {
                 if (count == 3)
                 {
-                    Console.WriteLine("出圈{0}:", curr.Index);                    
-                    pre.Next = curr.Next;
+                    Console.WriteLine("出圈{0}:", curr.Index);
+                    curr.Prev.Next = curr.Next;
+                    curr.Next.Prev = curr.Prev;
                     count = 0;
                 }
-                pre = curr;
+
                 curr = curr.Next;
                 count++;
-
-                if (pre==curr)
-                {
-                    Console.WriteLine("留下{0}:", curr.Index);
-                    break;
-                }
             }
+
+            Console.WriteLine("留下{0}:", curr.Index);
+
+            #endregion
         }
 
         public static JosephusNode BuildLinkedList(List<int> kids)
         {
             var head = new JosephusNode()
             {
+                Prev = null,
                 Next = null,
                 Index = 0
             };
+
+            //声明临时节点，用于循环构建链表
             var tmp = head;
+
+            //该临时节点与head相连
             head.Next = tmp;
+            tmp.Prev = head;
+
             for (var i = 0; i < kids.Count(); i++)
             {
                 if (i == 0)
@@ -88,73 +129,19 @@ namespace JosephusRing
                 {
                     tmp.Next = new JosephusNode()
                     {
+                        Prev = tmp,
                         Next = null,
                         Index = kids[i]
                     };
                     tmp = tmp.Next;
                 }
             }
+
+            //最后一个节点与head相连
             tmp.Next = head;
-            //var tmp = head;
-            //head.Next = tmp;
-            //kids.ForEach(k =>
-            //{
-            //    tmp.Next= new JosephusNode()
-            //    {
-            //        Next = null,
-            //        Index = k
-            //    };
-            //    tmp = tmp.Next;
-            //});
-            //tmp.Next = head;
+            head.Prev = tmp;
+
             return head;
-
-            //var list = new JosephusNode()
-            //{
-            //    ID = Guid.NewGuid().ToString(),
-            //    Next = null,
-            //    Index = 0
-            //};
-            //var current = new JosephusNode()
-            //{
-            //    ID = Guid.NewGuid().ToString(),
-            //    Next = null,
-            //    Index = 0
-            //};
-            //list.Next = current;
-            ////for (int i = 0; i < kids.Count(); i++)
-            ////{
-            ////    if (i == 0)
-            ////    {
-            ////        current.Index = kids[i];
-            ////    }
-            ////    else
-            ////    {
-            ////        current.Next = new JosephusNode()
-            ////        {
-            ////            ID = Guid.NewGuid().ToString(),
-            ////            Next = null,
-            ////            Index = kids[i]
-            ////        };
-
-            ////        current = current.Next;
-            ////    }
-            ////}
-            //kids.ForEach(kid =>
-            //{
-            //    current.Next = new JosephusNode()
-            //    {
-            //        ID = Guid.NewGuid().ToString(),
-            //        Next = null,
-            //        Index = kid
-            //    };
-
-            //    current = current.Next;
-            //});
-
-            //current.Next = list;
-
-            //return list;
         }
 
         /// <summary>
