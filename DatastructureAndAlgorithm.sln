@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JosephusRing", "JosephusRin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashTable", "HashTable\HashTable.csproj", "{3EDF2977-50F0-4E28-9603-AEFC26F4F311}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Matrix", "Matrix\Matrix.csproj", "{BF1AED38-0481-4A0E-B523-FA44C332B7AB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{3EDF2977-50F0-4E28-9603-AEFC26F4F311}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3EDF2977-50F0-4E28-9603-AEFC26F4F311}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3EDF2977-50F0-4E28-9603-AEFC26F4F311}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF1AED38-0481-4A0E-B523-FA44C332B7AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF1AED38-0481-4A0E-B523-FA44C332B7AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF1AED38-0481-4A0E-B523-FA44C332B7AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF1AED38-0481-4A0E-B523-FA44C332B7AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
