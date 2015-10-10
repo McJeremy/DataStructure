@@ -1,4 +1,4 @@
-﻿#二叉排序树（Binary Sort Tree）
+﻿##二叉排序树（Binary Sort Tree）
 
 ### 定义
   又称二叉查找树（Binary Search Tree），亦称二叉搜索树。  
