@@ -8,8 +8,8 @@ namespace ShortestPath
 {
     public class Floyd
     {
-        //定义图的定点
-        int[,] vertexs = new int
+        //定义图（邻接矩阵）
+        int[,] graph = new int
             [6, 6] {
                {int.MaxValue,1,1,int.MaxValue,int.MaxValue,int.MaxValue},
                 {int.MaxValue,int.MaxValue,1,int.MaxValue,int.MaxValue,int.MaxValue},
@@ -26,7 +26,7 @@ namespace ShortestPath
             {
                 for (int j = 0; j < 6; j++)
                 {
-                    g[i, j] = vertexs[i, j];
+                    g[i, j] = graph[i, j];
                 }
             }
 
