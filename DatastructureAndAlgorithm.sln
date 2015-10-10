@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JosephusRing", "JosephusRin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashTable", "HashTable\HashTable.csproj", "{3EDF2977-50F0-4E28-9603-AEFC26F4F311}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVL", "AVL\AVL.csproj", "{5D1DDCA7-BD52-4685-A1DF-A4004AD174CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DP", "DP\DP.csproj", "{596D8C40-F510-4DC7-BB89-4C76644FA859}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{3EDF2977-50F0-4E28-9603-AEFC26F4F311}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3EDF2977-50F0-4E28-9603-AEFC26F4F311}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3EDF2977-50F0-4E28-9603-AEFC26F4F311}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D1DDCA7-BD52-4685-A1DF-A4004AD174CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D1DDCA7-BD52-4685-A1DF-A4004AD174CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D1DDCA7-BD52-4685-A1DF-A4004AD174CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D1DDCA7-BD52-4685-A1DF-A4004AD174CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{596D8C40-F510-4DC7-BB89-4C76644FA859}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{596D8C40-F510-4DC7-BB89-4C76644FA859}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{596D8C40-F510-4DC7-BB89-4C76644FA859}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{596D8C40-F510-4DC7-BB89-4C76644FA859}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

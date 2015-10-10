@@ -185,12 +185,14 @@ namespace HuffmanTree
             while (arrValues.Length > 0)
             {
                 char[] cntChars = null;
+
+                //以该字符出现的次数，作为它的权重
                 var tmp = arrValues.Where(m => m == arrValues[0]);
                 cntChars = new char[tmp.Count()];
                 tmp.ToArray().CopyTo(cntChars, 0);
                 arrValues = arrValues.Where(m => m != tmp.First()).ToArray();
-
-                Nodes.Add(new HuffmanTreeNode(cntChars[0], cntChars.Length));
+                
+                Nodes.Add(new HuffmanTreeNode() { Value = cntChars[0], Weight = cntChars.Length });
             }
 
             return Nodes.ToArray();
@@ -205,7 +207,11 @@ namespace HuffmanTree
 
             while (bIsNext)
             {
+                //先排序
                 Array.Sort(nodes);
+
+                //如果只有（或只剩下两个未处理节点），则分别作为左右节点。
+                //因为已经排序，所以左节点的值小于右节点的值。
                 if (nodes.Count() == 2)
                 {
                     topNode = new HuffmanTreeNode();
