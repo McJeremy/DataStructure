@@ -46,6 +46,7 @@
     <Compile Include="DirectedGraph%28DG%29\MatrixDG.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnDirectedGraph%28UDG%29\ListUDG.cs" />
     <Compile Include="UnDirectedGraph%28UDG%29\MatrixUDG.cs" />
   </ItemGroup>
   <ItemGroup>

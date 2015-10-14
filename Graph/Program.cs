@@ -14,7 +14,6 @@ namespace Graph
         {
             char[] vexs = { 'A', 'B', 'C', 'D', 'E', 'F', 'G' };
 
-            Console.WriteLine("无向图的邻接矩阵:\r\n");
             char[,] udgedges = new char[,]{
             {'A', 'C'},
             {'A', 'D'},
@@ -23,22 +22,26 @@ namespace Graph
             {'C', 'D'},
             {'E', 'G'},
             {'F', 'G'}};
-            MatrixUDG udg = new MatrixUDG(vexs, udgedges);
-            udg.ToString();
 
-            Console.WriteLine("\r\n有向图的邻接矩阵:\r\n");
-            char[,] dgedges = new char[,]{
-            {'A', 'B'},
-            {'B', 'C'},
-            {'B', 'E'},
-            {'B', 'F'},
-            {'C', 'E'},
-            {'D', 'C'},
-            {'E', 'B'},
-            {'E', 'D'},
-            {'F', 'G'}};
-            MatrixDG dg = new MatrixDG(vexs, dgedges);
-            dg.ToString();
+            ListUDG listUDG = new ListUDG(vexs, udgedges);
+            listUDG.ToString();
+            //Console.WriteLine("无向图的邻接矩阵:\r\n");
+            //MatrixUDG udg = new MatrixUDG(vexs, udgedges);
+            //udg.ToString();
+
+            //char[,] dgedges = new char[,]{
+            //{'A', 'B'},
+            //{'B', 'C'},
+            //{'B', 'E'},
+            //{'B', 'F'},
+            //{'C', 'E'},
+            //{'D', 'C'},
+            //{'E', 'B'},
+            //{'E', 'D'},
+            //{'F', 'G'}};
+            //Console.WriteLine("\r\n有向图的邻接矩阵:\r\n");
+            //MatrixDG dg = new MatrixDG(vexs, dgedges);
+            //dg.ToString();
 
             Console.Read();
         }
