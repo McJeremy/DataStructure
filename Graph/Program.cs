@@ -25,6 +25,12 @@ namespace Graph
 
             ListUDG listUDG = new ListUDG(vexs, udgedges);
             listUDG.ToString();
+            Console.WriteLine("\r\n DFS:");
+            listUDG.DFS(listUDG.VertexNodes[0]);
+            Console.WriteLine("\r\n BFS:");
+            listUDG.InitVisited();
+            listUDG.BFS(listUDG.VertexNodes[0]);
+
             //Console.WriteLine("无向图的邻接矩阵:\r\n");
             //MatrixUDG udg = new MatrixUDG(vexs, udgedges);
             //udg.ToString();
@@ -39,6 +45,9 @@ namespace Graph
             //{'E', 'B'},
             //{'E', 'D'},
             //{'F', 'G'}};
+            //ListDG listDG = new ListDG(vexs, dgedges);
+            //listDG.ToString();
+
             //Console.WriteLine("\r\n有向图的邻接矩阵:\r\n");
             //MatrixDG dg = new MatrixDG(vexs, dgedges);
             //dg.ToString();
